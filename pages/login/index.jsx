@@ -18,7 +18,7 @@ const Login = () => {
         <button className={styles.btn}>Login</button>
         <div className={styles.register}>
           <p>Dont Have an Account?</p>
-          <Link href={"http://localhost:3000/signup"}>
+          <Link href={`/signup`}>
             <p className={styles.registration}>Register Now</p>
           </Link>
         </div>

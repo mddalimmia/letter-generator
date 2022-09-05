@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <div className={styles.body}>
-        <Link href={"http://localhost:3000/login"}>
+        <Link href={`/login`}>
           <button className={styles.startButton}>Continue & Get Started</button>
         </Link>
       </div>
