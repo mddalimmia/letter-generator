@@ -11,6 +11,7 @@
 }
 .logo {
   color: white;
+  cursor: pointer;
 }
 .buttonContainer {
   padding-right: 30px;

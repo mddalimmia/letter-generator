@@ -1,10 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../../styles/login.module.css";
+import Navbar from "../../Components/navbar";
+import Footer from "../../Components/footer";
 
 const Login = () => {
   return (
     <div className={styles.container}>
+      <Navbar />
       <div className={styles.wrapper}>
         <h1>Login to Your Account</h1>
         <div className={styles.userName}>
@@ -23,6 +26,7 @@ const Login = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

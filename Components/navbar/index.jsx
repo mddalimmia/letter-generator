@@ -7,7 +7,9 @@ const Navbar = () => {
     <div className={styles.container}>
       <div className={styles.mainWrapper}>
         <div className={styles.logoImage}>
-          <h1 className={styles.logo}>Generator</h1>
+          <Link href={`/`}>
+            <h1 className={styles.logo}>Generator</h1>
+          </Link>
         </div>
         <div className={styles.buttonContainer}>
           <Link href={`/login`}>
