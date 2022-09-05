@@ -10,10 +10,10 @@ const Navbar = () => {
           <h1 className={styles.logo}>Generator</h1>
         </div>
         <div className={styles.buttonContainer}>
-          <Link href={"http://localhost:3000/login"}>
+          <Link href={`/login`}>
             <button className={styles.logBtn}>Login</button>
           </Link>
-          <Link href={"http://localhost:3000/signup"}>
+          <Link href={`/signup`}>
             <button className={styles.signBtn}>Sign Up</button>
           </Link>
         </div>
