@@ -2,14 +2,15 @@ import Link from "next/link";
 import React from "react";
 import Footer from "../../Components/footer";
 import Navbar from "../../Components/navbar";
-import styles from "../../styles/preview.module.css";
+import styles from "../../styles/preview-pdf.module.css";
 
-const index = () => {
+const Pdf = () => {
   return (
     <div className={styles.container}>
       <Navbar />
       <div className={styles.mode}>
         <h1>Preview Mode</h1>
+        <h3>Pdf</h3>
       </div>
       <div className={styles.wrapper}>
         <div className={styles.preview}></div>
@@ -24,4 +25,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Pdf;

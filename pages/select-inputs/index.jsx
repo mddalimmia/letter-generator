@@ -1,10 +1,18 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Footer from "../../Components/footer";
 import Navbar from "../../Components/navbar";
 import styles from "../../styles/select.module.css";
 
-const index = () => {
+const Select = () => {
+  const router = useRouter();
+  const [mode, setMode] = useState(null);
+  const handleClick = () => {
+    mode === "email"
+      ? router.push(`/preview-email`)
+      : router.push(`/preview-pdf`);
+  };
   return (
     <div className={styles.container}>
       <Navbar />
@@ -31,14 +39,26 @@ const index = () => {
           </div>
           <div className={styles.mode}>
             <label>Mode</label>
-            <input type="checkbox" /> Print
-            <input type="checkbox" /> Email
+            <input
+              type="checkbox"
+              name="print"
+              value="print"
+              onChange={(e) => setMode(e.target.value)}
+            />
+            Print
+            <input
+              type="checkbox"
+              name="email"
+              value="email"
+              onChange={(e) => setMode(e.target.value)}
+            />{" "}
+            Email
           </div>
         </div>
         <div>
-          <Link href={`/preview`}>
-            <button className={styles.previewBtn}>See Preview</button>
-          </Link>
+          <button className={styles.previewBtn} onClick={handleClick}>
+            See Preview
+          </button>
         </div>
       </div>
 
@@ -47,4 +67,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Select;
