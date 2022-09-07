@@ -30,7 +30,7 @@
   letter-spacing: 1px;
   cursor: pointer;
   padding: 10px 10px;
-  border-radius: 20px;
+
   width: 50%;
   margin-bottom: 20px;
 }
@@ -44,7 +44,7 @@
   letter-spacing: 1px;
   cursor: pointer;
   padding: 10px 10px;
-  border-radius: 20px;
+
   width: 50%;
   margin-bottom: 40px;
 }
@@ -69,7 +69,6 @@
   letter-spacing: 1px;
   cursor: pointer;
   padding: 10px 30px;
-  border-radius: 20px;
 
   margin-bottom: 40px;
 }
