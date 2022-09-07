@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Footer from "../../Components/footer";
 import Navbar from "../../Components/navbar";
@@ -8,17 +9,19 @@ const index = () => {
       <Navbar />
       <div className={styles.wrapper}>
         <h1>Register Your Accout</h1>
-        <div className={styles.name}>
-          <label>Full Name</label>
-          <input placeholder="Enter Your Full Name" />
+        <div className={styles.nameWrapper}>
+          <div className={styles.name}>
+            <label>Full Name</label>
+            <input placeholder="Enter Your Full Name" />
+          </div>
+          <div className={styles.department}>
+            <label>Department</label>
+            <input placeholder="Department" />
+          </div>
         </div>
         <div className={styles.address}>
           <label>Address</label>
           <input placeholder="Enter Your Address" />
-        </div>
-        <div className={styles.department}>
-          <label>Department</label>
-          <input placeholder="Department" />
         </div>
         <div className={styles.email}>
           <label>Email Address</label>
@@ -36,7 +39,15 @@ const index = () => {
           <label>Confirm Password</label>
           <input placeholder="Password" />
         </div>
-        <button className={styles.regButton}>Register</button>
+        <Link href={`/login`}>
+          <button className={styles.regButton}>Register</button>
+        </Link>
+      </div>
+      <div className={styles.existAccount}>
+        <p>Already Have an Account?</p>
+        <Link href={`/login`}>
+          <p className={styles.log}>Login Instead</p>
+        </Link>
       </div>
       <Footer />
     </div>

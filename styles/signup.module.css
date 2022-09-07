@@ -13,18 +13,26 @@
   align-items: center;
   justify-content: center;
 }
-.wrapper div {
-  display: flex;
-  flex-direction: column;
-}
 .wrapper div label {
   margin: 10px 0px;
 }
+
+.nameWrapper {
+  display: flex;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+}
 .name input {
-  width: 60vw;
+  width: 30vw;
   height: 30px;
   border: 1px solid green;
   border-radius: 6px;
+}
+.address {
+  display: flex;
+  flex-direction: column;
 }
 .address input {
   width: 60vw;
@@ -32,11 +40,21 @@
   height: 30px;
   border-radius: 6px;
 }
+.department {
+  display: flex;
+  margin-left: 30px;
+  flex-direction: column;
+}
 .department input {
-  width: 60vw;
+  width: 27vw;
+
   height: 30px;
   border: 1px solid green;
   border-radius: 6px;
+}
+.email {
+  display: flex;
+  flex-direction: column;
 }
 .email input {
   width: 60vw;
@@ -44,17 +62,29 @@
   height: 30px;
   border-radius: 6px;
 }
+.username {
+  display: flex;
+  flex-direction: column;
+}
 .username input {
   width: 60vw;
   height: 30px;
   border: 1px solid green;
   border-radius: 6px;
 }
+.password {
+  display: flex;
+  flex-direction: column;
+}
 .password input {
   width: 60vw;
   height: 30px;
   border: 1px solid green;
   border-radius: 6px;
+}
+.confirm {
+  display: flex;
+  flex-direction: column;
 }
 .confirm input {
   width: 60vw;
@@ -71,4 +101,16 @@
   padding: 10px 30px;
   border-radius: 20px;
   margin-top: 20px;
+}
+.existAccount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.log {
+  margin-left: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(5, 59, 5);
+  font-weight: 400;
 }

@@ -1,0 +1,45 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0px 30px;
+}
+.selectCategory {
+  padding: 100px 0px;
+}
+.selectCategory label {
+  margin-right: 30px;
+}
+.selectOption {
+  width: 200px;
+  height: 5vh;
+}
+.templetes {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.example {
+  border: 3px solid rgb(98, 98, 100);
+  height: 60vh;
+  width: 100%;
+  cursor: pointer;
+}
+.continueBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.btn {
+  background-color: rgb(8, 77, 42);
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 20px;
+}

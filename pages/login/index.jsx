@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "../../styles/login.module.css";
 import Navbar from "../../Components/navbar";
 import Footer from "../../Components/footer";
 
 const Login = () => {
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <Navbar />
@@ -18,7 +20,12 @@ const Login = () => {
           <label>Password</label>
           <input placeholder="Password" />
         </div>
-        <button className={styles.btn}>Login</button>
+        <div className={styles.logButton}>
+          <Link href={`/category`}>
+            <button className={styles.btn}>Login</button>
+          </Link>
+        </div>
+
         <div className={styles.register}>
           <p>Dont Have an Account?</p>
           <Link href={`/signup`}>

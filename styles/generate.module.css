@@ -1,0 +1,75 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+.generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 50%;
+  background-color: rgb(15, 53, 53);
+}
+.generator h1 {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+.downloadBtn {
+  background-color: rgb(8, 77, 42);
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 20px;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.emailBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(8, 77, 42);
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 20px;
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.imfolder {
+  color: rgb(255, 255, 255);
+
+  margin-right: 6px;
+}
+.gomail {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  margin-right: 6px;
+}
+.backButton {
+  margin-top: 100px;
+}
+.backHome {
+  background-color: rgb(4, 34, 117);
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 20px;
+
+  margin-bottom: 40px;
+}

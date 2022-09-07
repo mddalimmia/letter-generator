@@ -1,0 +1,51 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+.company {
+  display: flex;
+  flex-direction: column;
+}
+.companyLabel {
+  margin-bottom: 20px;
+}
+.selected {
+  width: 200px;
+  height: 5vh;
+}
+.branch {
+  display: flex;
+  flex-direction: column;
+}
+.branchLabel {
+  margin: 20px 0px;
+}
+.selected {
+  width: 200px;
+  height: 5vh;
+}
+.mode {
+  margin: 20px 0px;
+}
+.previewBtn {
+  background-color: rgb(8, 77, 42);
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
