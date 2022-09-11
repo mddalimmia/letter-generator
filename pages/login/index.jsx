@@ -6,7 +6,6 @@ import Navbar from "../../Components/navbar";
 import Footer from "../../Components/footer";
 
 const Login = () => {
-  const router = useRouter();
   return (
     <div className={styles.container}>
       <Navbar />
@@ -21,9 +20,7 @@ const Login = () => {
           <input placeholder="Password" />
         </div>
         <div className={styles.logButton}>
-          <Link href={`/category`}>
-            <button className={styles.btn}>Login</button>
-          </Link>
+          <button className={styles.btn}>Login</button>
         </div>
 
         <div className={styles.register}>

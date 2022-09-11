@@ -3,19 +3,19 @@
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
-  background-image: linear-gradient(to right, #00b09b, #2c62aa);
 }
-.body {
-  min-height: 100vh;
+
+.body p {
+  cursor: pointer;
 }
 .topWrapper {
   border: 1px solid black;
   display: flex;
-  margin: 45px;
+  background-image: linear-gradient(to right, #00b09b, #2c62aa);
 }
 .actions {
-  margin: 100px;
-  flex: 5;
+  margin: 100px 0px 0px 80px;
+  flex: 4;
   display: flex;
   flex-direction: column;
 }
@@ -23,7 +23,7 @@
   border: 2px solid black;
 }
 .submitBtn {
-  width: 50%;
+  width: 65%;
   font-size: 20px;
   color: white;
   height: 50px;
@@ -36,7 +36,7 @@
   font-weight: 600;
 }
 .previewBtn {
-  width: 50%;
+  width: 65%;
   color: white;
   font-size: 20px;
   height: 50px;
@@ -49,7 +49,7 @@
   font-weight: 600;
 }
 .setBtn {
-  width: 50%;
+  width: 65%;
   font-size: 20px;
   color: white;
   height: 50px;
@@ -62,7 +62,7 @@
   font-weight: 600;
 }
 .castBtn {
-  width: 50%;
+  width: 65%;
   font-size: 20px;
   color: white;
   height: 50px;
@@ -75,20 +75,29 @@
   font-weight: 600;
 }
 .history {
-  flex: 7;
-  margin-top: 100px;
+  flex: 8;
+  padding-top: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+}
+.months {
+  padding-top: 25px;
+}
+.months label {
+  margin-right: 15px;
+  font-size: 20px;
+}
+.months input {
+  height: 25px;
 }
 .startButton {
   padding: 15px 25px;
-  font-size: 20px;
+  font-size: 15px;
 
   background-color: rgb(18, 84, 85);
   cursor: pointer;
   color: white;
 }
 .bottomWrapper {
-  display: flex;
-  margin: 45px;
+  background-color: #00b09b;
 }

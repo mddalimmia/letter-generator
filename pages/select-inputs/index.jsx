@@ -7,12 +7,13 @@ import styles from "../../styles/select.module.css";
 
 const Select = () => {
   const router = useRouter();
+  const path = router.query.path;
   const [mode, setMode] = useState(null);
-  const handleClick = () => {
-    mode === "email"
-      ? router.push(`/preview-email`)
-      : router.push(`/preview-pdf`);
+  const [branchName, setBranchName] = useState(null);
+  const handleChange = (e) => {
+    setBranchName(e.target.value);
   };
+
   return (
     <div className={styles.container}>
       <Navbar />
@@ -24,6 +25,9 @@ const Select = () => {
               <label>Company</label>
             </div>
             <select className={styles.selected}>
+              <option value="" selected disabled hidden>
+                Choose Company
+              </option>
               <option value="optiona">Option A</option>
               <option value="optionb">Option B</option>
             </select>
@@ -32,9 +36,17 @@ const Select = () => {
             <div className={styles.branchLabel}>
               <label>Branch</label>
             </div>
-            <select className={styles.selected}>
+            <select
+              className={styles.selected}
+              onChange={handleChange}
+              value={branchName}
+            >
+              <option value="" selected disabled hidden>
+                Choose Branch
+              </option>
               <option value="brancha">Branch A</option>
               <option value="branchb">Branch B</option>
+              <option value="branchc">Branch C</option>
             </select>
           </div>
           <div className={styles.mode}>
@@ -51,12 +63,20 @@ const Select = () => {
               name="email"
               value="email"
               onChange={(e) => setMode(e.target.value)}
-            />{" "}
+            />
             Email
           </div>
         </div>
         <div>
-          <button className={styles.previewBtn} onClick={handleClick}>
+          <button
+            className={styles.previewBtn}
+            onClick={() => {
+              router.push({
+                pathname: `/preview/${path}`,
+                query: { branchName, mode },
+              });
+            }}
+          >
             See Preview
           </button>
         </div>

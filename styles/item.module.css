@@ -1,22 +1,32 @@
 .container {
-  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
-.bar {
+.catagory {
+  cursor: pointer;
+  background-color: rgb(9, 85, 121);
+  color: white;
+  padding: 10px 25px;
+  width: 25%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px 15px 0px 25px;
-  cursor: pointer;
+  justify-content: center;
+  font-size: 25px;
+}
+.items {
   width: 25%;
-  height: 50px;
-  background-image: linear-gradient(to right, #08095c, #0a565c);
-  margin-bottom: 25px;
-  border-radius: 5px;
 }
-.bar p {
-  color: white;
-  font-size: larger;
+.pp {
+  cursor: pointer;
+  width: 60%;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(252, 107, 82);
 }
+
 .aifill {
   color: white;
 }

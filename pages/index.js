@@ -5,11 +5,50 @@ import { useState, useRef } from "react";
 import Navbar from "../Components/navbar";
 import styles from "../styles/Home.module.css";
 import Submit from "../Components/Submit";
-import data from "../Mock/data";
+import Previous from "../Components/previous";
 
 export default function Home() {
+  const data = [
+    {
+      id: "a",
+      categorie: "Category A",
+      type: "Type A",
+    },
+    {
+      id: "b",
+      categorie: "Category B",
+      type: "Type B",
+    },
+    {
+      id: "c",
+      categorie: "Category C",
+      type: "Type C",
+    },
+    {
+      id: "d",
+      categorie: "Category D",
+      type: "Type D",
+    },
+    {
+      id: "e",
+      categorie: "Category D",
+      type: "Type D",
+    },
+    {
+      id: "f",
+      categorie: "Category C",
+      type: "Type C",
+    },
+    {
+      id: "g",
+      categorie: "Category E",
+      type: "Type E",
+    },
+  ];
   const scrollToRef = useRef();
+  const scrollToReq = useRef();
   const [component, setComponent] = useState(false);
+  const [requests, setRequests] = useState(false);
   return (
     <div className={styles.container}>
       <Head>
@@ -24,22 +63,43 @@ export default function Home() {
             <button
               className={styles.submitBtn}
               onClick={() => {
+                setRequests(false);
                 setComponent(true);
                 scrollToRef.current.scrollIntoView();
               }}
             >
               Submit New Letter
             </button>
-            <button className={styles.previewBtn}>View Previewes</button>
+            <button
+              className={styles.previewBtn}
+              onClick={() => {
+                setComponent(false);
+                setRequests(true);
+                scrollToRef.current.scrollIntoView();
+              }}
+            >
+              View Previous Requests
+            </button>
             <button className={styles.setBtn}>Set Up</button>
-            <button className={styles.castBtn}>Admin Cast</button>
+            <button className={styles.castBtn}>Reports</button>
           </div>
+
           <div className={styles.history}>
-            <h2>My Letter History</h2>
+            <h3>My Letter Request Summary</h3>
+
+            <div className={styles.months}>
+              <label>Month</label>
+              <input type="month" min="2022-09" defaultValue="2022-09" />
+            </div>
           </div>
         </div>
-        <div className={styles.bottomWrapper} ref={scrollToRef}>
-          {component === true ? <Submit /> : null}
+      </div>
+      <div ref={scrollToRef}>
+        <div className={styles.bottomWrapper}>
+          {component === true ? <Submit data={data} /> : null}
+        </div>
+        <div className={styles.bottomWrapper}>
+          {requests === true ? <Previous /> : null}
         </div>
       </div>
       <Footer />
